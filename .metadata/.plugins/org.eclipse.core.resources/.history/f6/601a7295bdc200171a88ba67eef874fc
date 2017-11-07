@@ -1,0 +1,13 @@
+
+public class Discretize {
+	CSV csv;
+	public Discretize(CSV csv) {
+		this.csv = csv;
+	}
+	
+	public CSV doDiscretize(int col) {
+		
+		
+		return csv;
+	}
+}

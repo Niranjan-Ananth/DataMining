@@ -1,0 +1,12 @@
+
+public class CandidateGenerator {
+	CSV csv;
+	public CandidateGenerator(CSV csv) {
+		this.csv = csv;
+	}
+	
+	public void generate() {
+		
+	}
+	
+}

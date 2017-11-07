@@ -1,0 +1,19 @@
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String filename = "/home/niran/eclipse-workspace/DataMining/AggregateDiscretizeAndSample/src/Input.csv";
+		String delimiter = ",";
+		CSV csv = new CSV(filename, delimiter);
+		csv.readCSV();
+		csv.printCSV();
+		Aggregate a = new Aggregate(csv);
+		csv = a.doAggregate(2);
+		csv.printCSV();
+		Discretize d = new Discretize(csv);
+		csv = d.doDiscretize(2);
+		csv.printCSV();
+	}
+
+}

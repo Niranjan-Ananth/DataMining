@@ -1,0 +1,8 @@
+
+public class Demo {
+	String filename = "/home/niran/eclipse-workspace/DataMining/GiniIndex/Input.csv";
+	String outFilename = "/home/niran/eclipse-workspace/DataMining/AggregateDiscretizeAndSample/Output.csv";
+	String delimiter = ",";
+	CSV csv = new CSV(filename, delimiter);
+	
+}

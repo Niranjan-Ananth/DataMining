@@ -1,0 +1,7 @@
+
+public class GiniIndex {
+	CSV csv;
+	public GiniIndex(CSV csv) {
+		this.csv = csv;
+	}
+}

@@ -1,0 +1,15 @@
+import java.util.Collections;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		String filename = "/home/niran/eclipse-workspace/DataMining/Apriori/src/Input.csv";
+		String outFilename = "/home/niran/eclipse-workspace/DataMining/AggregateDiscretizeAndSample/Output.csv";
+		String delimiter = ",";
+		CSV csv = new CSV(filename, delimiter);
+		Collections.sort(csv.csvLines);
+		csv.readCSV();
+		csv.printCSV();
+	}
+
+}

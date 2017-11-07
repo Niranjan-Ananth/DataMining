@@ -1,0 +1,11 @@
+
+public class StratifiedSampling {
+	CSV csv;
+	public StratifiedSampling(CSV csv) {
+		this.csv = csv;
+	}
+	
+	public void doSample() {
+		
+	}
+}

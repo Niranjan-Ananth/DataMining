@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class StratifiedSampling {
+	CSV csv;
+	public StratifiedSampling(CSV csv) {
+		this.csv = csv;
+	}
+	
+	public CSV doSample() {
+		HashMap<String, Integer> sizeMap = new HashMap<>();
+		HashMap<String, ArrayList<String[]>> listMap = new HashMap<>();
+		for(String[] currLine : csv.csvLines) {
+			String type = currLine[0];
+			if(sizeMap.containsKey(type)) {
+				sizeMap.put(type, sizeMap.get(type)+1);
+			}
+			else {
+				sizeMap.put(type, 1);
+			}
+			if(listMap.containsKey(type)) {
+				ArrayList<>
+			}
+			else {
+				
+			}
+		}
+			
+		return csv;
+	}
+}

@@ -1,0 +1,39 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class GiniIndex {
+	CSV csv;
+	public GiniIndex(CSV csv) {
+		this.csv = csv;
+	}
+	
+	public String findBestAttributeToSplit() {
+		String attr = "";
+		int size = csv.csvLines.get(0).length;
+		for(int i=0; i<csv.csvLines.get(0).length-1; i++) {
+			HashMap<String, Integer> hmYes = new HashMap<>();
+			for(String[] currLine : csv.csvLines) {
+				String key = currLine[i];
+				if(currLine[currLine.length-1]=="yes") {
+					if(hmYes.containsKey(key)) { 
+						hmYes.put(key, hmYes.get(key)+1);
+					}
+					else {
+						hmYes.put(key, 1);
+					}
+				}
+				
+				else {
+					
+				}
+				
+				
+			}
+			double giniIndex;
+			for(Map.Entry<String, Integer> m : hm.entrySet()) {
+				
+			}
+		}
+		return attr;
+	}
+}

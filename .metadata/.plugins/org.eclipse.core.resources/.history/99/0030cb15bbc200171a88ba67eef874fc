@@ -1,0 +1,13 @@
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String filename = "";
+		String delimiter = ",";
+		CSV csv = new CSV(filename, delimiter);
+		csv.readCSV();
+		csv.printCSV();
+	}
+
+}
