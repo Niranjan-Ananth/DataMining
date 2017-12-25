@@ -1,16 +1,16 @@
+//Works for Binary and multi-way splitting of nominal attributes only.
+//The output classes are "Yes" and "No" only.
 
 public class Demo {
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String filename = "/home/niran/eclipse-workspace/DataMining/GiniIndex/Input.csv";
-		String outFilename = "/home/niran/eclipse-workspace/DataMining/AggregateDiscretizeAndSample/Output.csv";
+		String filename = "/home/niran/eclipse-workspace/DataMining2/GiniIndex/src/input.csv";
 		String delimiter = ",";
 		CSV csv = new CSV(filename, delimiter);
 		csv.readCSV();
 		csv.printCSV();
-		GiniIndex g = new GiniIndex(csv);
-		String ans = g.findBestAttributeToSplit();
-		System.out.println(ans);
+		GiniIndexHandler gh = new GiniIndexHandler(csv);
+		gh.findBestSplit();
 	}
 
 }
