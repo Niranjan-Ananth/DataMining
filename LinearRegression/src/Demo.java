@@ -12,7 +12,7 @@ public class Demo {
 		trainingData[1][0] = 2;
 		trainingData[1][1] = 2;
 		trainingData[2][0] = 3;
-		trainingData[2][1] = 4;
+		trainingData[2][1] = 3;
 
 		double w1 = 0, w0 = 0, y1, y, x0 = 1, x1;
 		double learningRate = 0.3;
@@ -23,15 +23,17 @@ public class Demo {
 			for (int i = 0; i < numberOfRecords; i++) {
 				y = trainingData[i][1];
 				x1 = trainingData[i][0];
-				y1 = w1 * x1;
+				y1 = w1 * x1 + w0;
 				totalError += (y1 - y)*(y1 - y);
 				w0 = w0 + learningRate * (y1 - y) * x0;
 				w1 = w1 + learningRate * (y1 - y) * x1;
+				System.out.println("W0: " + w0 + " W1: " + w1);
 				//System.out.println("Total error: " + totalError);
 			}
 			meanSquaredError = totalError / (2 * numberOfRecords);
 			System.out.println("Mean squared error in epoch " + k + " = " + totalError);
 			k++;
+			System.out.println();
 		}
 	}
 
